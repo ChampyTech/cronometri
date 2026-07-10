@@ -1,0 +1,59 @@
+* {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html,
+body {
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+}
+
+#title {
+    color: #333;
+    margin-top: 0;
+}
+
+.card {
+    background: white;
+    padding: 36px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(30, 30, 50, 0.08);
+    text-align: center;
+}
+
+#info {
+    font-size: 12px;
+}
+
+@media(max-width: 600px) {
+    .card {
+        width: 70%;
+        zoom: 80%;
+    }
+}
+
+@media(max-width: 400px) {
+    .card {
+        width: 100%;
+        zoom: 70%;
+    }
+}
+
+table {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+th {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+td {
+    font-size: 50px;
+    font-weight: 700;
+}
