@@ -4,8 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
     <title>Quanto tempo ha vissuto?</title>
+
+    <script>
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        if (window.location.protocol === 'file:') {
+            link.href = 'styles.css';
+        } else {
+            // Prende la prima parte del percorso (il nome della repository, es. /cronometri/)
+            const repoName = window.location.pathname.split('/')[1];
+            link.href = '/' + repoName + '/styles.css';
+        }
+        document.head.appendChild(link);
+    </script>
 </head>
 
 <body>
@@ -28,7 +40,16 @@
         <span id="info">-</span>
     </div>
 
-    <script src="/script.js"></script>
+    <script>
+        const script = document.createElement('script');
+        if (window.location.protocol === 'file:') {
+            script.src = 'script.js';
+        } else {
+            const repoName = window.location.pathname.split('/')[1];
+            script.src = '/' + repoName + '/script.js';
+        }
+        document.body.appendChild(script);
+    </script>
 </body>
 
 </html>
